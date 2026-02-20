@@ -1,0 +1,23 @@
+<!-- templates/about.html -->
+
+{% extends "base.html" %}
+
+{% block title %}About — Project Manager{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h1>About Project Manager</h1>
+    <p>This is a simple project management application built with Flask
+       as part of the Software Engineering & Agile module.</p>
+    <p>It demonstrates the <strong>Model-View-Controller (MVC)</strong> pattern
+       and basic database operations using Flask-SQLAlchemy.</p>
+    <h2>Features</h2>
+    <ul>
+        <li>View all projects</li>
+        <li>Add new projects</li>
+        <li>Edit existing projects</li>
+        <li>Delete projects</li>
+        <li>Organise projects by category</li>
+    </ul>
+</div>
+{% endblock %}

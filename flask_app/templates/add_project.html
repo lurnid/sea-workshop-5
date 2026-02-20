@@ -1,0 +1,27 @@
+<!-- templates/add_project.html -->
+
+{% extends "base.html" %}
+
+{% block title %}Add Project — Project Manager{% endblock %}
+
+{% block content %}
+<h2>Add a New Project</h2>
+
+<form method="POST">
+    <label for="name">Project Name (required):</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="category_id">Category (optional):</label>
+    <select id="category_id" name="category_id">
+        <option value="">-- No Category --</option>
+        {% for category in categories %}
+        <option value="{{ category.id }}">{{ category.name }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="description">Description (optional):</label>
+    <textarea id="description" name="description" rows="3"></textarea>
+
+    <button type="submit" class="btn btn-primary">Add Project</button>
+</form>
+{% endblock %}
